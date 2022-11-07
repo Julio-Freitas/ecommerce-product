@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  gap: 55px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--color-black-line);
+
+  nav {
+    flex: 1;
+    display: inline-flex;
+    gap: 32px;
+    margin-top: 1px;
+    letter-spacing: -0.02px;
+  }
+
+  nav a {
+    color: var(--color-dark--grayish-blue);
+    font-style: normal;
+    font-size: 16px;
+    text-transform: capitalize;
+    
+
+
+  }
+}
