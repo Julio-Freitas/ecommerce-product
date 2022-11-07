@@ -20,7 +20,7 @@ jobs:
         path: node_modules
         key: yarn-deps-${{ hashFiles('yarn.lock') }}
         restore-keys: |
-        yarn-deps-${{ hashFiles('yarn.lock') }}
+          yarn-deps-${{ hashFiles('yarn.lock') }}
         github_actor: ${{ github.actor }}
 
      - name: Install dependencies
