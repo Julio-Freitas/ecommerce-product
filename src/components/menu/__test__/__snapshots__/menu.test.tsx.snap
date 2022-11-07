@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`Box > Should be show title 1`] = `
+exports[`Menu > Should be Menu 1`] = `
 <menu
   class="_container_9678f5"
 >

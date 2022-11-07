@@ -36,5 +36,5 @@ jobs:
         run: yarn
 
       - name: Execute test
-        run:  yarn test
+        run:  yarn test -u
 
