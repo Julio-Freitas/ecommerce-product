@@ -1,0 +1,60 @@
+// Vitest Snapshot v1
+
+exports[`Box > Should be show title 1`] = `
+<menu
+  class="_container_9678f5"
+>
+  <a
+    href="/"
+  >
+    <img
+      alt="blacklogo "
+      src="/src/assets/images/logo.svg"
+      title="logo"
+    />
+  </a>
+  <nav>
+    <a
+      href="/collections"
+    >
+      Collections
+    </a>
+    <a
+      href="/men"
+    >
+      Men
+    </a>
+    <a
+      href="/woman"
+    >
+      Woman
+    </a>
+    <a
+      href="/about"
+    >
+      About
+    </a>
+    <a
+      href="/contact"
+    >
+      Contact
+    </a>
+  </nav>
+  <div
+    class="_cart_9bc7a5"
+  >
+    <img
+      alt="icon cart"
+      class="_-icon_9bc7a5"
+      src="/src/assets/images/icon-cart.svg"
+      title="card"
+    />
+    <img
+      alt="icon avatar"
+      class="_-avatar_9bc7a5"
+      src="/src/assets/images/image-avatar.png"
+      title="Avatar"
+    />
+  </div>
+</menu>
+`;
