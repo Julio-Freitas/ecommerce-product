@@ -1,0 +1,115 @@
+.modal {
+  background-color: var(--color-very-dark-blue-modal);
+  z-index: 0;
+  position: fixed;
+  width: 100%;
+  inset: 0;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.5s;
+  padding: 0 25px;
+
+  &__content {
+    max-width: 500px;
+    max-height: 500px;
+    align-items: center;
+
+    background-color: transparent;
+    z-index: 1;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  &__icon-close {
+    background-color: transparent;
+    align-self: flex-end;
+    position: relative;
+    top: -35px;
+    cursor: pointer;
+    img {
+      filter: drop-shadow(1px 0px 0px var(--color-primary-orange));
+    }
+    &:hover img {
+      filter: invert(1) drop-shadow(1px 0px 0px var(--color-primary-orange));
+    }
+  }
+}
+
+.hidden {
+  visibility: visible;
+  position: absolute;
+  opacity: 1;
+  inset: -100%;
+  width: 0;
+}
+
+.galery-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__emphasis {
+    position: relative;
+
+    &-img {
+      max-width: 100%;
+      width: 442px;
+      border-radius: 11px;
+      cursor: pointer;
+    }
+    &__prev-next-button {
+      position: absolute;
+      top: calc(50% - 25px);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:nth-child(1) {
+        left: -20px;
+        transform: rotate(180deg);
+      }
+      &:nth-child(2) {
+        right: -25px;
+      }
+      &:hover {
+        box-shadow: 1px -1px 5px 2px var(--color-primary-orange);
+        background-color: var(--color-primary-orange);
+      }
+      &:hover img {
+        filter: invert(1);
+      }
+    }
+  }
+
+  &__thumbnails {
+    display: inline-flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__thumbnails img {
+    width: 88px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    cursor: pointer;
+
+    &.active {
+      border-color: var(--color-primary-orange);
+      filter: opacity(0.5);
+    }
+  }
+}

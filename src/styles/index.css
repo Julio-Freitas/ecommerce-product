@@ -1,16 +1,18 @@
 :root {
-    /**Primary */
+  /**Primary */
   --color-primary-orange: hsl(26, 100%, 55%);
   --color-primary-pale-orange: hsl(25, 100%, 94%);
+  --color-primary-orange-opacity: hsl(26, 100%, 55%, 20%);
 
   /**Neutal */
   --color-very-dark-blue: hsl(220, 13%, 13%);
+  --color-very-dark-blue-modal: hsl(220, 13%, 13%, 75%);
   --color-dark-grayish-blue: hsl(219, 9%, 45%);
   --color-grayish-blue: hsl(220, 14%, 75%);
   --color-light-grayish-blue: hsl(223, 64%, 98%);
   --color-white: hsl(0, 0%, 100%);
-  --color-black : hsl(0, 0%, 0%, 100%);
-  --color-black-line : hsl(0, 0%, 0%, 15%);
+  --color-black: hsl(0, 0%, 0%, 100%);
+  --color-black-line: hsl(0, 0%, 0%, 15%);
 }
 
 * {
@@ -32,17 +34,23 @@ html,
 body,
 #root {
   height: 100%;
-  font-family: 'Overpass', sans-serif;
-
+  width: 100%;
+  font-family: "Overpass", sans-serif;
 }
 
-#root{
-  padding: 0 166px;
-  max-width: 1440px;
+#root {
+  padding: 0 25px;
 }
 
 img {
   max-width: 100%;
   display: inline-block;
   margin: 0;
+}
+
+@media screen and (min-width: 1240px) {
+  #root {
+    padding: 0 166px;
+    max-width: 1440px;
+  }
 }

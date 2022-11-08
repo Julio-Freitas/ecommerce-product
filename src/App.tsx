@@ -1,13 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
 import Menu from "./components/menu";
-// import reactLogo from "./assets/react.svg";
+import { CardProvider } from "./context/cartProvider";
 import Router from "./routes";
 
 function App() {
   return (
     <BrowserRouter>
-      <Menu />
-      <Router />
+      <CardProvider>
+        <>
+          <Menu />
+          <Router />
+        </>
+      </CardProvider>
     </BrowserRouter>
   );
 }
