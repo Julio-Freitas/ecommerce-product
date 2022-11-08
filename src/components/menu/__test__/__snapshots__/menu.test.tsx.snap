@@ -1,0 +1,82 @@
+// Vitest Snapshot v1
+
+exports[`Menu > Should be Menu 1`] = `
+<menu
+  class="_container_9678f5"
+>
+  <a
+    href="/"
+  >
+    <img
+      alt="blacklogo "
+      src="/src/assets/images/logo.svg"
+      title="logo"
+    />
+  </a>
+  <nav>
+    <a
+      class="__9678f5"
+      href="/collections"
+    >
+      Collections
+    </a>
+    <a
+      class="__9678f5"
+      href="/men"
+    >
+      Men
+    </a>
+    <a
+      class="__9678f5"
+      href="/woman"
+    >
+      Woman
+    </a>
+    <a
+      class="__9678f5"
+      href="/about"
+    >
+      About
+    </a>
+    <a
+      class="__9678f5"
+      href="/contact"
+    >
+      Contact
+    </a>
+  </nav>
+  <div
+    class="_cart_9bc7a5"
+  >
+    <button
+      class="_cart-icon_9bc7a5"
+      data-amount="0"
+      type="button"
+    >
+      <img
+        alt="icon cart"
+        src="/src/assets/images/icon-cart.svg"
+        title="card"
+      />
+    </button>
+    <img
+      alt="icon avatar"
+      class="_cart-avatar_9bc7a5"
+      src="/src/assets/images/image-avatar.png"
+      title="Avatar"
+    />
+    <div
+      class="_cart__hidden--info_9bc7a5"
+    >
+      <h3>
+        Card
+      </h3>
+      <p
+        class="_cart__info-empty_9bc7a5"
+      >
+        Your cart is empty.
+      </p>
+    </div>
+  </div>
+</menu>
+`;
