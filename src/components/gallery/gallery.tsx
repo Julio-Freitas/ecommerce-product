@@ -46,6 +46,7 @@ export const Gallery = ({
                 src={thumb.src}
                 className={thumb.id === _currentImg.id ? _S["active"] : ""}
                 onClick={() => _onChangeImage(thumb.id)}
+                alt="Thumbnail image product"
               />
             ))}
           </div>

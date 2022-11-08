@@ -41,8 +41,9 @@ export const Summary = ({
         <button
           className={_S["product__summary-controls--add-minus"]}
           onClick={() => _handleControl(EControls.minus)}
+          aria-label="button minus"
         >
-          <img src={iconMinus} />
+          <img src={iconMinus} alt="Icon minus button"/>
         </button>
         <input
           type="number"
@@ -55,14 +56,16 @@ export const Summary = ({
         <button
           className={_S["product__summary-controls--add-plus"]}
           onClick={() => _handleControl(EControls.plus)}
+          aria-label="button add"
         >
-          <img src={iconPlus} />
+          <img src={iconPlus} alt="img of icon plus" />
         </button>
       </label>
 
       <button
         type="button"
         className={_S["product__summary-controls--button"]}
+        aria-label="Add-to-cart"
         onClick={() =>
           addProduct({
             amount,
