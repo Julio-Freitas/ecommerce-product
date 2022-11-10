@@ -49,7 +49,7 @@
 
     nav {
       order: 0;
-      position: absolute;
+      position: fixed;
       flex-direction: column;
       top: 0;
       width: 100%;
@@ -67,10 +67,12 @@
         z-index: 1;
         visibility: visible;
         opacity: 1;
-        left: -25px;
-        background-color: var( --color-primary-orange);
+        left: 0;
+        background-color: var(--color-primary-orange);
         box-shadow: 1px 2px 5px 1px var(--color-black-line);
-        height: 100vh;
+        height: 100%;
+        justify-content: flex-start;
+        gap: 25px;
 
         &::before {
           content: 'Menu';
