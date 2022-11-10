@@ -129,7 +129,13 @@
     }
   }
 
+  @media screen and (max-width: 992px) {
+    order: 2;
+
+  }
+
   @media screen and (max-width: 568px) {
+    gap: 20px;
     &__info {
       right: -50%;
     }

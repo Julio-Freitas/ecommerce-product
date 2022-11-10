@@ -1,57 +1,77 @@
-import {  useMemo } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
+import iconMenu from "../../assets/images/icon-menu.svg";
 
 import Cart from "../cart";
 import _S from "./menu.module.scss";
+import { useOnClickOutside } from "./hooks/useOnClickOutside";
 
 const Menu = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
+  const refmenu = useRef<HTMLDivElement | null>(null);
+
+  useOnClickOutside({
+    element: refmenu,
+    handler: (clickoutside) => !clickoutside && setShowMenu(false),
+  });
+
   const menuActive = useMemo(() => {
     return location.pathname;
   }, [location.pathname]);
 
   return (
     <menu className={_S["container"]}>
-      <Link to="/">
-        <img src={logo} title="logo" alt="blacklogo " />
+      <Link to="/" className={_S["logo-mobile"]}>
+        <img src={logo} title="logo" alt="blacklogo" />
       </Link>
 
-      <nav>
-        <Link
-          to="collections"
-          className={
-            _S[menuActive === "/collections" ? "container-active" : ""]
-          }
+      <div ref={refmenu}>
+        <button
+          onClick={(e) => setShowMenu(!showMenu)}
+          type="button"
+          className={_S["button-nav-mobile"]}
+          data-target="#menu-mobile"
         >
-          Collections
-        </Link>
-        <Link
-          to="men"
-          className={_S[menuActive === "/men" ? "container-active" : ""]}
-        >
-          Men
-        </Link>
-        <Link
-          to="woman"
-          className={_S[menuActive === "/woman" ? "container-active" : ""]}
-        >
-          Woman
-        </Link>
-        <Link
-          to="about"
-          className={_S[menuActive === "/about" ? "container-active" : ""]}
-        >
-          About
-        </Link>
-        <Link
-          to="contact"
-          className={_S[menuActive === "/contact" ? "container-active" : ""]}
-        >
-          Contact
-        </Link>
-      </nav>
+          <img src={iconMenu} title="logo" alt="menu" />
+        </button>
 
+        <nav className={_S[showMenu ? "-mobile" : ""]} id="#menu-mobile">
+          <Link
+            to="collections"
+            className={
+              _S[menuActive === "/collections" ? "container-active" : ""]
+            }
+          >
+            Collections
+          </Link>
+          <Link
+            to="men"
+            className={_S[menuActive === "/men" ? "container-active" : ""]}
+          >
+            Men
+          </Link>
+          <Link
+            to="woman"
+            className={_S[menuActive === "/woman" ? "container-active" : ""]}
+          >
+            Woman
+          </Link>
+          <Link
+            to="about"
+            className={_S[menuActive === "/about" ? "container-active" : ""]}
+          >
+            About
+          </Link>
+          <Link
+            to="contact"
+            className={_S[menuActive === "/contact" ? "container-active" : ""]}
+          >
+            Contact
+          </Link>
+        </nav>
+      </div>
       <Cart />
     </menu>
   );
