@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 export default function NotFound() {
   const [countSeconds, setCountSeconds] = useState(5);
-
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setCountSeconds(5);
+  }, [navigate]);
 
   useEffect(() => {
     const id =

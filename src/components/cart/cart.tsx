@@ -46,7 +46,7 @@ export const Cart = () => {
               <div>
                 <p>{formatCurrency(total ?? 0)}</p>
                 <button type="button" onClick={() => removeItemCard()}>
-                  <img src={iconDelete} />
+                  <img src={iconDelete} alt="button remove item"/>
                 </button>
               </div>
             </div>
