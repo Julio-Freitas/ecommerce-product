@@ -5,46 +5,63 @@ exports[`Menu > Should be Menu 1`] = `
   class="_container_9678f5"
 >
   <a
+    class="_logo-mobile_9678f5"
     href="/"
   >
     <img
-      alt="blacklogo "
+      alt="blacklogo"
       src="/src/assets/images/logo.svg"
       title="logo"
     />
   </a>
-  <nav>
-    <a
-      class="__9678f5"
-      href="/collections"
+  <div>
+    <button
+      class="_button-nav-mobile_9678f5"
+      data-target="#menu-mobile"
+      type="button"
     >
-      Collections
-    </a>
-    <a
+      <img
+        alt="menu"
+        src="/src/assets/images/icon-menu.svg"
+        title="logo"
+      />
+    </button>
+    <nav
       class="__9678f5"
-      href="/men"
+      id="#menu-mobile"
     >
-      Men
-    </a>
-    <a
-      class="__9678f5"
-      href="/woman"
-    >
-      Woman
-    </a>
-    <a
-      class="__9678f5"
-      href="/about"
-    >
-      About
-    </a>
-    <a
-      class="__9678f5"
-      href="/contact"
-    >
-      Contact
-    </a>
-  </nav>
+      <a
+        class="__9678f5"
+        href="/collections"
+      >
+        Collections
+      </a>
+      <a
+        class="__9678f5"
+        href="/men"
+      >
+        Men
+      </a>
+      <a
+        class="__9678f5"
+        href="/woman"
+      >
+        Woman
+      </a>
+      <a
+        class="__9678f5"
+        href="/about"
+      >
+        About
+      </a>
+      <a
+        class="__9678f5"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </nav>
+  </div>
   <div
     class="_cart_9bc7a5"
   >
