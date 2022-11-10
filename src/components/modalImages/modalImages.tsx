@@ -89,6 +89,7 @@ export const Modal = ({ open = false, onClose }: IModal) => {
                     : ""
                 }
                 onClick={() => _onChangeImage(thumb.id)}
+                alt="image thumbnail gallery"
               />
             ))}
           </div>
