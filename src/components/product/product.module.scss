@@ -136,33 +136,7 @@
         }
       }
 
-      &--button {
-        height: 100%;
-        padding: 0 15px;
-        color: var(--color-light-grayish-blue);
-        font-weight: bold;
-        background-color: var(--color-primary-orange);
-        cursor: pointer;
-        transition: all 0.5s;
-        opacity: 0.75;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        flex: 1;
-        justify-content: center;
-        font-size: 17px;
-        line-height: 29px;
-        letter-spacing: 0.05px;
 
-        img {
-          filter: brightness(0) invert(1);
-        }
-
-        &:hover {
-          opacity: 1;
-          filter: drop-shadow(1px 2px 3px var(--color-primary-orange));
-        }
-      }
     }
   }
 }

@@ -5,6 +5,7 @@ import iconPlus from "../../../assets/images/icon-plus.svg";
 
 import _S from "../product.module.scss";
 import { EControls, ISummary } from "../types";
+import Button from "../../button";
 
 export const Summary = ({
   totalAmount,
@@ -43,7 +44,7 @@ export const Summary = ({
           onClick={() => _handleControl(EControls.minus)}
           aria-label="button minus"
         >
-          <img src={iconMinus} alt="Icon minus button"/>
+          <img src={iconMinus} alt="Icon minus button" />
         </button>
         <input
           type="number"
@@ -62,9 +63,8 @@ export const Summary = ({
         </button>
       </label>
 
-      <button
+      <Button
         type="button"
-        className={_S["product__summary-controls--button"]}
         aria-label="Add-to-cart"
         onClick={() =>
           addProduct({
@@ -79,7 +79,7 @@ export const Summary = ({
       >
         <img src={iconCart} alt="Add item in Card" />
         Add to cart
-      </button>
+      </Button>
     </div>
   </div>
 );
