@@ -5,12 +5,13 @@ import iconDelete from "../../assets/images/icon-delete.svg";
 import { useCart } from "../../context/cartProvider/useCart";
 import { formatCurrency } from "../../utils/formatCurrency";
 import _S from "./cart.module.scss";
+import Button from "../button";
+
 export const Cart = () => {
   const [showInfo, setShowInfo] = useState(false);
   const { amount, product, total, removeItemCard } = useCart();
   return (
     <div className={_S["cart"]}>
-
       <button
         type="button"
         data-amount={amount ?? 0}
@@ -30,27 +31,35 @@ export const Cart = () => {
       <div className={_S[`${showInfo ? "cart__info" : "cart__hidden--info"}`]}>
         <h3>Card</h3>
         {!amount ? (
-          <p className={_S['cart__info-empty']}>Your cart is empty.</p>
+          <p className={_S["cart__info-empty"]}>Your cart is empty.</p>
         ) : (
-          <>
+          <div className={_S["cart__info-content"]}>
             <div className={_S["cart__info-product"]}>
-              <img src={product?.src} title="card" alt="icon cart" />
-              <p>{product?.name}</p>
-            </div>
-            <div className={_S["cart__info-price"]}>
-              <span>
-                {amount &&
-                  total &&
-                  `${formatCurrency(total / amount)} x ${amount}`}
-              </span>
-              <div>
-                <p>{formatCurrency(total ?? 0)}</p>
-                <button type="button" onClick={() => removeItemCard()}>
-                  <img src={iconDelete} alt="button remove item"/>
-                </button>
+              <img
+                src={product?.src}
+                title="card"
+                alt="icon cart"
+                className={_S["cart__info-product-img"]}
+              />
+
+              <div className={_S["cart__info-price"]}>
+                <p>{product?.name}</p>
+
+                <div>
+                  <span>
+                    {amount &&
+                      total &&
+                      `${formatCurrency(total / amount)} x ${amount}`}
+                  </span>
+                  <p>{formatCurrency(total ?? 0)}</p>
+                  <button type="button" onClick={() => removeItemCard()}>
+                    <img src={iconDelete} alt="button remove item" />
+                  </button>
+                </div>
               </div>
             </div>
-          </>
+            <Button type="button">checkout</Button>
+          </div>
         )}
       </div>
     </div>
