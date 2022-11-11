@@ -88,7 +88,6 @@
         max-width: 159px;
         border-radius: 12px;
 
-
         input[type="number"] {
           background-color: var(--color-light-grayish-blue);
           text-align: center;
@@ -101,7 +100,6 @@
           max-width: 159px;
           outline: none;
           border-radius: 10px;
-
         }
 
         input[type="number"]::-webkit-inner-spin-button {
@@ -116,10 +114,9 @@
           align-items: center;
         }
 
-
         button:hover img,
         button:hover img {
-          filter:invert(.6);
+          filter: invert(0.6);
         }
 
         &-minus {
@@ -135,8 +132,6 @@
           padding: 6px;
         }
       }
-
-
     }
   }
 }
@@ -190,10 +185,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  .product {
+    margin: 15px 0;
+  }
+
   .galery-container {
-    max-width: 100%;
+    max-width: 350px;
     &__emphasis img {
-      width: auto;
+      width: 1px;
     }
   }
 }
