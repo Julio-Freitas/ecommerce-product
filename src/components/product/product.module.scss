@@ -1,21 +1,33 @@
 .product {
   margin: 94px 48px;
   display: flex;
-  gap: 50px;
+  gap: 126px;
 
   &__summary {
     flex: 1;
-    margin-top: 24px;
+    margin-top: 60px;
+
     &-company {
       font-size: 16px;
       font-weight: 700;
       color: var(--color-primary-orange);
-      margin-bottom: 8px;
+      margin-bottom: 15px;
+      letter-spacing: 0.39px;
+    }
+
+    &-old {
+      span {
+        font-size: 16px !important;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+      }
     }
 
     &-title {
-      font-size: 32px;
-      margin-bottom: 24px;
+      font-size: 44px;
+      margin-bottom: 32px;
+      letter-spacing: 0.1px;
+      line-height: 52px;
     }
 
     &-description {
@@ -28,12 +40,13 @@
     &-price {
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin: 16px 0;
+      gap: 16px;
+      margin: 27px 0 5px;
     }
 
     &-amount {
-      font-size: 24px;
+      font-size: 29px;
+      letter-spacing: 0.1px;
     }
 
     &-discount {
@@ -62,18 +75,22 @@
     &-controls {
       display: flex;
       align-items: stretch;
-      height: 45px;
+      height: 53px;
       gap: 15px;
       position: relative;
+      margin-top: 32px;
 
       &--add {
         height: 100%;
         position: relative;
         display: flex;
         align-items: center;
+        max-width: 159px;
+        border-radius: 12px;
+
 
         input[type="number"] {
-          background-color: var(--color-black-line);
+          background-color: var(--color-light-grayish-blue);
           text-align: center;
           height: 100%;
           -moz-appearance: textfield;
@@ -81,8 +98,10 @@
           -webkit-appearance: textfield;
           font-weight: bold;
           font-size: 18px;
-          max-width: 150px;
+          max-width: 159px;
           outline: none;
+          border-radius: 10px;
+
         }
 
         input[type="number"]::-webkit-inner-spin-button {
@@ -91,16 +110,29 @@
 
         button {
           display: inline-flex;
+          position: absolute;
           cursor: pointer;
           height: 100%;
-          padding: 5px;
           align-items: center;
-          background-color: var(--color-black-line);
         }
+
 
         button:hover img,
         button:hover img {
-          filter: brightness(0) invert(1);
+          filter:invert(.6);
+        }
+
+        &-minus {
+          left: 10px;
+          background-color: transparent;
+          padding: 6px;
+          border-radius: 15px;
+        }
+
+        &-plus {
+          right: 10px;
+          background-color: transparent;
+          padding: 6px;
         }
       }
 
@@ -116,10 +148,16 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
+        flex: 1;
+        justify-content: center;
+        font-size: 17px;
+        line-height: 29px;
+        letter-spacing: 0.05px;
 
         img {
           filter: brightness(0) invert(1);
         }
+
         &:hover {
           opacity: 1;
           filter: drop-shadow(1px 2px 3px var(--color-primary-orange));

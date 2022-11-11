@@ -22,6 +22,7 @@ const Menu = () => {
   }, [location.pathname]);
 
   return (
+    <>
     <menu className={_S["container"]}>
       <Link to="/" className={_S["logo-mobile"]}>
         <img src={logo} title="logo" alt="blacklogo" />
@@ -74,6 +75,9 @@ const Menu = () => {
       </div>
       <Cart />
     </menu>
+    {showMenu &&     <div className={_S['overlay']} />}
+
+    </>
   );
 };
 
