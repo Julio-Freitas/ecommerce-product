@@ -52,5 +52,6 @@ img {
   #root {
     padding: 0 166px;
     max-width: 1440px;
+    margin:  0 auto;
   }
 }
