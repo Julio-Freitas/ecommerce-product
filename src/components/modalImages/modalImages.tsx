@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
 
 import { useImages } from "../../context/galleryProvider/useImages";
@@ -41,6 +44,7 @@ export const Modal = ({ open = false, onClose }: IModal) => {
   };
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
       className={_S[`${open ? "modal" : "hidden"}`]}
       onClick={_handleClickContainer}

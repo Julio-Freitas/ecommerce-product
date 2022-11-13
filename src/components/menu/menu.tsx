@@ -34,7 +34,7 @@ const Menu = () => {
 
         <div ref={refmenu}>
           <button
-            onClick={(e) => setShowMenu(!showMenu)}
+            onClick={() => setShowMenu(!showMenu)}
             type="button"
             className={_S["button-nav-mobile"]}
             data-target="#menu-mobile"

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, HTMLAttributes } from "react"
+import { ButtonHTMLAttributes } from "react"
 
 export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: React.ReactNode

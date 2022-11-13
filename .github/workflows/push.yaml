@@ -4,9 +4,9 @@ name: Release
 # The event that will trigger the action
 on:
   push:
-    branches: [main]
+    branches: ['*']
   pull_request:
-    branches: [main]
+    branches: ['*']
 
 jobs:
   install:

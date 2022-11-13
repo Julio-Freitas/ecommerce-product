@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { RefObject, useCallback, useEffect } from "react";
 
 type FunctionTypeClick = <T>(value: T) => void;
