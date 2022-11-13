@@ -13,4 +13,4 @@ export default defineConfig({
     host: true,
   }
 
-} as any);
+} as unknown);

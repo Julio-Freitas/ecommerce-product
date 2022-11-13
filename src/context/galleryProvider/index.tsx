@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext } from "react";
 import imageOne from "../../assets/images/image-product-1.jpg";
 import imageTwo from "../../assets/images/image-product-2.jpg";
 import imageThree from "../../assets/images/image-product-3.jpg";
@@ -23,7 +23,7 @@ const emphasis = [
   { id: 4, src: imageFour },
 ];
 
-import { IContext, ImageProps, IProvider } from "./types";
+import { IContext, IProvider } from "./types";
 
 export const GalleryContext = createContext<IContext>({} as IContext);
 

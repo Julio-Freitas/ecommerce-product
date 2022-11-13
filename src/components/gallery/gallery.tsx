@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import _S from "./galerry.module.scss";
 
 import { GalleryProvider } from "../../context/galleryProvider";
@@ -9,8 +12,7 @@ type ImageType = {
   src: string;
 };
 
-const DISCOUNT = 0.5;
-const ORIGINAL_AMOUNT = 250;
+
 
 export const Gallery = ({
   onModal,
@@ -19,8 +21,7 @@ export const Gallery = ({
 }) => {
   const { thumbnails, emphasis: images } = useImages();
   const [_currentImg, _setCurrentImg] = useState<ImageType>(images[0]);
-  const [_amount, _setAmount] = useState(1);
-  const [_totalAmount, _setTotalAmount] = useState(ORIGINAL_AMOUNT);
+
 
   const _onChangeImage = (id: number) => {
     const findImage = images.find((img) => img.id === id);

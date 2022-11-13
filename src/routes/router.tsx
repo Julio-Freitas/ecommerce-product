@@ -1,5 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import ModalImages from "../components/modalImages";
+import { Route, Routes } from "react-router-dom";
 import NotFound from "../components/notFound";
 import Product from "../components/product";
 

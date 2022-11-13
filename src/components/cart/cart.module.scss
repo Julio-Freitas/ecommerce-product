@@ -3,6 +3,7 @@
   align-items: center;
   gap: 44px;
   position: relative;
+
   &-avatar {
     width: 50px;
     height: 50px;
@@ -132,12 +133,11 @@
         align-items: center;
         margin-bottom: 20px;
 
-        p{
+        p {
           font-weight: bold;
           line-height: 27px;
           letter-spacing: 0.5px;
         }
-
       }
       span {
         margin-right: 5px;
@@ -159,14 +159,27 @@
 
   }
 
+  @media screen and (max-width: 1239px) {
+    &__info {
+      width: 300px;
+      left: calc(-100% - 150px);
+    }
+  }
+
+
+
   @media screen and (max-width: 992px) {
     order: 2;
   }
 
   @media screen and (max-width: 568px) {
-    gap: 20px;
+    gap: 5px;
+    width: 150px;
+    justify-content: right;
+
     &__info {
-      right: -50%;
+      width: 280px;
+      left: calc(-100% - 70px);
     }
   }
 }

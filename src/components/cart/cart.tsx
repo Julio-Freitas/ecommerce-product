@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import iconCart from "../../assets/images/icon-cart.svg";
 import avatar from "../../assets/images/image-avatar.png";
 import iconDelete from "../../assets/images/icon-delete.svg";
@@ -6,12 +6,20 @@ import { useCart } from "../../context/cartProvider/useCart";
 import { formatCurrency } from "../../utils/formatCurrency";
 import _S from "./cart.module.scss";
 import Button from "../button";
+import { useOnClickOutside } from "../menu/hooks/useOnClickOutside";
 
 export const Cart = () => {
+  const refCart = useRef<HTMLDivElement | null>(null);
+  useOnClickOutside({
+    element: refCart,
+    handler: (clickoutside) => !clickoutside && setShowInfo(false),
+  });
+
   const [showInfo, setShowInfo] = useState(false);
   const { amount, product, total, removeItemCard } = useCart();
+
   return (
-    <div className={_S["cart"]}>
+    <div className={_S["cart"]} ref={refCart}>
       <button
         type="button"
         data-amount={amount ?? 0}

@@ -1,8 +1,3 @@
-import imageOne from "../../assets/images/image-product-1.jpg";
-import imageTwo from "../../assets/images/image-product-2.jpg";
-import imageThree from "../../assets/images/image-product-3.jpg";
-import imageFour from "../../assets/images/image-product-4.jpg";
-
 import imageOneThumbnail from "../../assets/images/image-product-1-thumbnail.jpg";
 import imageTwoThumbnail from "../../assets/images/image-product-2-thumbnail.jpg";
 import imageThreeThumbnail from "../../assets/images/image-product-3-thumbnail.jpg";
@@ -14,13 +9,9 @@ import ModalImages from "../modalImages";
 import { GalleryProvider } from "../../context/galleryProvider";
 import { EControls } from "./types";
 import { useCart } from "../../context/cartProvider/useCart";
-import  Gallery  from "../gallery";
+import Gallery from "../gallery";
 import { Summary } from "./summary";
 
-type ImageType = {
-  id: number;
-  src: string;
-};
 const thumbnails = [
   { id: 1, src: imageOneThumbnail },
   { id: 2, src: imageTwoThumbnail },
@@ -28,19 +19,12 @@ const thumbnails = [
   { id: 4, src: imageFourThumbnail },
 ];
 
-const images = [
-  { id: 1, src: imageOne },
-  { id: 2, src: imageTwo },
-  { id: 3, src: imageThree },
-  { id: 4, src: imageFour },
-];
 const DISCOUNT = 0.5;
 const ORIGINAL_AMOUNT = 250;
 
 export const Product = () => {
   const { addProduct } = useCart();
 
-  const [_currentImg, _setCurrentImg] = useState<ImageType>(images[0]);
   const [_amount, _setAmount] = useState(1);
   const [_totalAmount, _setTotalAmount] = useState(ORIGINAL_AMOUNT);
   const [openModal, setOpenModal] = useState(false);
